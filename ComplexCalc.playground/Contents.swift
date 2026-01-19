@@ -28,6 +28,28 @@ print("Welcome back to the UW Calculator")
 //: IMPORTANT: If any tests are commented out, you will be graded a zero (0)! You should never be in the habit of eliminating tests to make the code pass.
 //:
 class Calculator {
+    
+    // add, must handle an array of Integers as single parameter in addition to lhs rhs
+    func add(lhs: Int, rhs: Int) -> Int {
+        return lhs + rhs
+    }
+    
+    // subtract
+    func subtract(lhs: Int, rhs: Int) -> Int {
+        return lhs - rhs
+    }
+    
+    // multiply, must handle an array of Integers as single parameter in addition to lhs rhs
+    func multiply(lhs: Int, rhs: Int) -> Int {
+        return lhs * rhs
+    }
+    
+    // divide
+    func divide(lhs: Int, rhs: Int) -> Int {
+        return lhs / rhs
+    }
+    
+    // add and subtract Cartesian points
 }
 
 //: Don't change the name of this object (`calc`); it's used in all the tests.
