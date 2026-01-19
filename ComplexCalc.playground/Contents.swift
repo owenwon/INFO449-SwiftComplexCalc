@@ -34,6 +34,14 @@ class Calculator {
         return lhs + rhs
     }
     
+    func add(_ nums: [Int]) -> Int {
+        var total = 0
+        for n in nums {
+            total += n
+        }
+        return total
+    }
+    
     // subtract
     func subtract(lhs: Int, rhs: Int) -> Int {
         return lhs - rhs
@@ -44,9 +52,31 @@ class Calculator {
         return lhs * rhs
     }
     
+    func multiply(_ nums: [Int]) -> Int {
+        var total = 1
+        for n in nums {
+            total *= n
+        }
+        return total
+    }
+    
     // divide
     func divide(lhs: Int, rhs: Int) -> Int {
         return lhs / rhs
+    }
+    
+    // count
+    func count(_ nums: [Int]) -> Int {
+        return nums.count
+    }
+    
+    // average
+    func avg(_ nums: [Int]) -> Int {
+        var total = 0
+        for n in nums {
+            total += n
+        }
+        return total / nums.count
     }
     
     // add and subtract Cartesian points
