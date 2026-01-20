@@ -126,6 +126,9 @@ class Calculator {
     
     // average
     func avg(_ nums: [Int]) -> Int {
+        guard nums.count > 0 else {
+            return 0
+        }
         var total = 0
         for n in nums {
             total += n
@@ -148,7 +151,7 @@ let calc = Calculator()
 //: Keep in mind that writing new tests may reveal ambiguity in the specification above--if that's the case, document the ambiguity, declare what you think *should* happen, and write the test to test for it.
 
 // ===== Your tests go here
-
+calc.avg([]) == 0
 //: ---
 //: ## Test code block
 //: Do not modify the code in this section
