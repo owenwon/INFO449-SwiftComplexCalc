@@ -42,9 +42,21 @@ class Calculator {
         return total
     }
     
+    func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        var first = lhs.0 + rhs.0
+        var second = lhs.1 + rhs.1
+        return (first, second)
+    }
+    
     // subtract
     func subtract(lhs: Int, rhs: Int) -> Int {
         return lhs - rhs
+    }
+    
+    func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        var first = lhs.0 - rhs.0
+        var second = lhs.1 - rhs.1
+        return (first, second)
     }
     
     // multiply, must handle an array of Integers as single parameter in addition to lhs rhs
