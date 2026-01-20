@@ -28,8 +28,7 @@ print("Welcome back to the UW Calculator")
 //: IMPORTANT: If any tests are commented out, you will be graded a zero (0)! You should never be in the habit of eliminating tests to make the code pass.
 //:
 class Calculator {
-    
-    // add, must handle an array of Integers as single parameter in addition to lhs rhs
+    // add
     func add(lhs: Int, rhs: Int) -> Int {
         return lhs + rhs
     }
@@ -48,6 +47,19 @@ class Calculator {
         return (first, second)
     }
     
+    func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x1 = lhs["x"] ?? 0
+        let x2 = rhs["x"] ?? 0
+        let newX = x1 + x2
+        
+        let y1 = lhs["y"] ?? 0
+        let y2 = rhs["y"] ?? 0
+        let newY = y1 + y2
+        
+        return ["x": newX, "y": newY]
+    }
+    
+    
     // subtract
     func subtract(lhs: Int, rhs: Int) -> Int {
         return lhs - rhs
@@ -59,7 +71,20 @@ class Calculator {
         return (first, second)
     }
     
-    // multiply, must handle an array of Integers as single parameter in addition to lhs rhs
+    func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x1 = lhs["x"] ?? 0
+        let x2 = rhs["x"] ?? 0
+        let newX = x1 - x2
+        
+        let y1 = lhs["y"] ?? 0
+        let y2 = rhs["y"] ?? 0
+        let newY = y1 - y2
+        
+        return ["x": newX, "y": newY]
+    }
+
+    
+    // multiply
     func multiply(lhs: Int, rhs: Int) -> Int {
         return lhs * rhs
     }
@@ -72,10 +97,12 @@ class Calculator {
         return total
     }
     
+    
     // divide
     func divide(lhs: Int, rhs: Int) -> Int {
         return lhs / rhs
     }
+    
     
     // mathOp
     func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
@@ -90,10 +117,12 @@ class Calculator {
         return total
     }
     
+    
     // count
     func count(_ nums: [Int]) -> Int {
         return nums.count
     }
+    
     
     // average
     func avg(_ nums: [Int]) -> Int {
@@ -104,7 +133,6 @@ class Calculator {
         return total / nums.count
     }
     
-    // add and subtract Cartesian points
 }
 
 //: Don't change the name of this object (`calc`); it's used in all the tests.
