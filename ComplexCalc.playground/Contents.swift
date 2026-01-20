@@ -65,6 +65,19 @@ class Calculator {
         return lhs / rhs
     }
     
+    // mathOp
+    func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
+        return op(lhs, rhs)
+    }
+    
+    func mathOp(args: [Int], beg: Int, op: (Int, Int) -> Int) -> Int {
+        var total = beg
+        for n in args {
+            total = op(total, n)
+        }
+        return total
+    }
+    
     // count
     func count(_ nums: [Int]) -> Int {
         return nums.count
